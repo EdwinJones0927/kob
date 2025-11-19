@@ -3,17 +3,16 @@ package com.kob.backend.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class TestController {
-    @GetMapping("/users")
-    public List<String> test(){
-        List<String> list = new ArrayList<>();
-        list.add("Edwin");
-        list.add("Jack");
-        list.add("Tommy");
-        return list;
+    @GetMapping("/bots")
+    public Map<String, String> test(){
+        Map<String, String> m = new HashMap<>();
+        m.put("name", "Edwin Jones");
+        m.put("rating", "999999");
+        return m;
     }
 }

@@ -7,6 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class KobBackendApplication {
     public static void main(String[] args) {
-        SpringApplication.run(KobBackendApplication.class, args);
+        ConfigurableApplicationContext ioc = SpringApplication.run(KobBackendApplication.class, args);
     }
 }
