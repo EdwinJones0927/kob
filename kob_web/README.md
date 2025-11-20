@@ -1,4 +1,4 @@
-# kob_web
+# web
 
 ## Project setup
 ```

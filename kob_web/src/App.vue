@@ -1,32 +1,23 @@
 <template>
-  <div>Bot Name: {{bot_name}}</div>
-  <div>Bot Rating: {{bot_rating}}</div>
+  <NavBar />
   <router-view />
 </template>
 
-<style>
-</style>
-
 <script>
-  import { ref } from "vue";
-  export default {
-    name: "App",
-    setup() {
-      let bot_name = ref("Loading...");
-      let bot_rating = ref("Loading...");
-      fetch("http://localhost:3000/bots")
-        .then(res => res.json())
-        .then(data => {
-          console.log(data);
-          bot_name.value = data.name;
-          bot_rating.value = data.rating;
-        });
-        return {
-          bot_name,
-          bot_rating
-        }
-      }
+import NavBar from './components/NavBar.vue'
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap"
+
+export default {
+  components: {
+    NavBar
   }
+}
 </script>
 
-
+<style>
+body {
+  background-image: url("@/assets/images/background.png");
+  background-size: cover;
+}
+</style>
