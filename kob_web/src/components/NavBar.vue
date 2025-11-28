@@ -40,9 +40,7 @@ import { computed } from 'vue'
 
 export default {
     setup() {
-        // 获取当前页面的路由信息
         const route = useRoute();
-        // 获取当前页面的路由名称
         let route_name = computed(() => route.name)
         return {
             route_name
